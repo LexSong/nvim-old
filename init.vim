@@ -46,7 +46,7 @@ function! PackInit() abort
   packadd minpac
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
-  call minpac#add('numirias/semshi')
+  call minpac#add('numirias/semshi', {'type': 'opt'})
   call minpac#add('chriskempson/base16-vim')
 endfunction
 
@@ -55,6 +55,10 @@ command! PackStatus call PackInit() | call minpac#status()
 command! PackUpdate call PackInit() | call minpac#update()
 
 " Semshi
+if has("python3")
+  packadd semshi
+endif
+
 let g:semshi#error_sign = v:false
 let g:semshi#mark_selected_nodes = 2
 
