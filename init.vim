@@ -43,7 +43,7 @@ if $TERM == "vtpcon"
 endif
 
 " Plugins
-function! PackInit() abort
+function PackInit() abort
   packadd minpac
   call minpac#init()
   call minpac#add('chriskempson/base16-vim')
