@@ -100,6 +100,24 @@ augroup ale_virtual_text
   autocmd ColorScheme * silent! call g:Base16hi("ALEVirtualTextInfo",    g:base16_gui0C, g:base16_gui01, g:base16_cterm0C, g:base16_cterm01)
 augroup END
 
+" lightline.vim
+function UpdateLightlineColorscheme() abort
+  if exists('g:base16_gui00')
+    runtime autoload/lightline/colorscheme/base16.vim
+    let g:lightline = {'colorscheme': 'base16'}
+  else
+    let g:lightline = {}
+  endif
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
+
+augroup lightline_colorscheme
+  autocmd!
+  autocmd ColorScheme * silent! call UpdateLightlineColorscheme()
+augroup END
+
 " Semshi
 if has('python3')
   packadd semshi
