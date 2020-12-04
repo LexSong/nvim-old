@@ -6,6 +6,7 @@ set fileformats=unix,dos
 set hidden
 set ignorecase
 set nohlsearch
+set noshowmode
 set signcolumn=no
 set termguicolors
 set virtualedit=block
@@ -51,6 +52,7 @@ function PackInit() abort
   call minpac#init()
   call minpac#add('chriskempson/base16-vim')
   call minpac#add('dense-analysis/ale')
+  call minpac#add('itchyny/lightline.vim')
   call minpac#add('k-takata/minpac', {'type': 'opt'})
   call minpac#add('numirias/semshi', {'type': 'opt'})
 endfunction
