@@ -101,6 +101,11 @@ augroup ale_virtual_text
   autocmd ColorScheme * silent! call g:Base16hi("ALEVirtualTextInfo",    g:base16_gui0C, g:base16_gui01, g:base16_cterm0C, g:base16_cterm01)
 augroup END
 
+" Custom ALE Fixers
+function ALEFixerRemoveCR(buffer, lines) abort
+  return map(a:lines, {_, line -> substitute(line, '\r', '', 'g')})
+endfunction
+
 " lightline.vim
 let g:lightline = {}
 
