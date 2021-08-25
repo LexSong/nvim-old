@@ -151,6 +151,7 @@ if has('python3')
   packadd semshi
 endif
 
+let g:semshi#always_update_all_highlights = v:true
 let g:semshi#error_sign = v:false
 let g:semshi#mark_selected_nodes = 2
 
