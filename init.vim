@@ -63,6 +63,7 @@ command! PackStatus call PackInit() | call minpac#status()
 command! PackUpdate call PackInit() | call minpac#update()
 
 " ALE
+let g:ale_linters_explicit = 1
 let g:ale_set_signs = 0
 let g:ale_virtualtext_prefix = '▌'
 
