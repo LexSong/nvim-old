@@ -46,6 +46,15 @@ if $TERM ==# 'vtpcon'
   set shell=cmd.exe\ /C\ set\ TERM=&&cmd.exe
 endif
 
+" Set python3 executable
+if has('win32')
+  let g:python3_host_prog = 'C:\Users\LexSong\mambaforge\python.exe'
+  if !executable(g:python3_host_prog)
+    echoerr "Can't find the Python executable"
+    unlet g:python3_host_prog
+  endif
+endif
+
 " Plugins
 function PackInit() abort
   packadd minpac
