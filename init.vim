@@ -2,6 +2,7 @@ scriptencoding utf-8
 
 " Options
 set clipboard=unnamedplus
+set completeslash=slash
 set fileformats=unix,dos
 set hidden
 set ignorecase
