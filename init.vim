@@ -27,8 +27,8 @@ noremap L $
 noremap M J
 noremap <Space> :
 noremap <C-W><Space> :
-
-nnoremap Y y$
+noremap <PageDown> <C-D>
+noremap <PageUp> <C-U>
 
 " NOP
 noremap $ <Nop>
