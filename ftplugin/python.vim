@@ -8,3 +8,7 @@ let b:ale_linters = ['flake8', 'jedils']
 set omnifunc=ale#completion#OmniFunc
 
 nmap = <Plug>(ale_fix)
+
+set iminsert=1
+lnoremap <buffer> ; :
+lnoremap <buffer> : ;
