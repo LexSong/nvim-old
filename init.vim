@@ -20,15 +20,29 @@ set tabstop=4
 
 " Custom key mappings
 noremap : ,
-noremap H 0
-noremap J <C-D>
-noremap K <C-U>
-noremap L $
-noremap M J
 noremap <Space> :
 noremap <C-W><Space> :
 noremap <PageDown> <C-D>
 noremap <PageUp> <C-U>
+
+" Key mappings for Colemak Mod-DH
+noremap m h
+noremap n j
+noremap e k
+noremap i l
+noremap M 0
+noremap N <C-D>
+noremap E <C-U>
+noremap I $
+
+noremap h n
+noremap j e
+noremap k m
+noremap l i
+noremap H N
+noremap J E
+noremap K J
+noremap L I
 
 " NOP
 noremap $ <Nop>
