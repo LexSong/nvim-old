@@ -4,9 +4,7 @@ scriptencoding utf-8
 set clipboard=unnamedplus
 set completeslash=slash
 set fileformats=unix,dos
-set hidden
 set ignorecase
-set nohlsearch
 set noshowmode
 set signcolumn=no
 set termguicolors
@@ -44,22 +42,9 @@ noremap J E
 noremap K J
 noremap L I
 
-" NOP
-noremap $ <Nop>
-noremap , <Nop>
-noremap 0 <Nop>
-noremap ^ <Nop>
-noremap <C-D> <Nop>
-noremap <C-U> <Nop>
-
 " Map Ctrl-W to exit terminal mode and start windows command
 " Use Ctrl-C or <Esc> to cancel windows command and stay in normal mode
 tmap <C-W> <C-\><C-N><C-W>
-
-" Unset $TERM in shell command if $TERM is vtpcon
-if $TERM ==# 'vtpcon'
-  set shell=cmd.exe\ /C\ set\ TERM=&&cmd.exe
-endif
 
 " Set python3 executable
 if has('win32')
